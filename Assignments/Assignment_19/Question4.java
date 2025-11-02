@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Packages
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+package Assignment_19;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   : printDigits
+//  Description     : It is used to print the individual digits of a number, separated by spaces.
+//  Input           : Integer (num)
+//  Output          : Void (prints digits to console)
+//  Author          : Atharva Vinod Gawade
+//  Date            : 30/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+class Logic
+{
+    void printDigits(int num)
+    {
+        int rev = 0;
+                while(num != 0)
+        {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        
+        while(rev != 0)
+        {
+            int digit = rev % 10;
+            System.out.print(digit + " ");
+            rev /= 10;
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+public class Question4 
+{
+    public static void main(String args[])
+    {
+        Logic obj = new Logic();
+        System.out.print("Digits: ");
+        obj.printDigits(9876);
+        System.out.println();
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases handled successfully by the application
+//
+//  Input   :   9876    Output  :   Digits: 9 8 7 6 
+//  Input   :   105     Output  :   Digits: 1 0 5 
+//  Input   :   1       Output  :   Digits: 1 
+//  Input   :   4200    Output  :   Digits: 4 2 0 0 
+//
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
