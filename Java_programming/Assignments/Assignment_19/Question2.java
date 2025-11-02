@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Packages
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+package Assignment_19;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   : displayGrade
+//  Description     : Displays the grade of a student based on marks.
+//  Input           : Integer (marks)
+//  Output          : Displays grade message
+//  Author          : Atharva Vinod Gawade
+//  Date            : 30/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void displayGrade(int marks)
+    {
+        if(marks >= 90)
+            System.out.println("Grade : A+");
+        else if(marks >= 80)
+            System.out.println("Grade : A");
+        else if(marks >= 70)
+            System.out.println("Grade : B");
+        else if(marks >= 60)
+            System.out.println("Grade : C");
+        else if(marks >= 50)
+            System.out.println("Grade : D");
+        else
+            System.out.println("Grade : Fail");
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+public class Question2 {
+    
+    public static void main(String args[])
+    {
+        Logic obj = new Logic();
+        obj.displayGrade(82);
+    }
+
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases handled successfully by the application
+//
+//  Input   :   marks = 95   Output  :   Grade : A+
+//  Input   :   marks = 82   Output  :   Grade : A
+//  Input   :   marks = 67   Output  :   Grade : C
+//  Input   :   marks = 45   Output  :   Grade : Fail
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////

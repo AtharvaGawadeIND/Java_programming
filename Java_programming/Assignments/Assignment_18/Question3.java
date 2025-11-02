@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Packages
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+package Assignment_18;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   : getOddNumbers
+//  Description     : It returns a string containing all odd numbers from 1 up to N (inclusive).
+//  Input           : Integer (n)
+//  Output          : String (Space-separated odd numbers)
+//  Author          : Atharva Vinod Gawade
+//  Date            : 30/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    String getOddNumbers(int n)
+    {
+        String result = "";
+        for(int i = 1; i <= n; i++)
+        {
+            if(i % 2 != 0)
+                result += i + " ";
+        }
+        return result.trim(); // Trim to remove trailing space
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+public class Question3 {
+
+     public static void main(String args[])
+    {
+        Logic obj = new Logic();
+        int n = 20;
+        System.out.println("Odd numbers up to " + n + ": " + obj.getOddNumbers(n));
+    }
+    
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases handled successfully by the application
+//
+//  Input   :   10      Output  :   Odd numbers up to 10: 1 3 5 7 9
+//  Input   :   5       Output  :   Odd numbers up to 5: 1 3 5
+//  Input   :   20      Output  :   Odd numbers up to 20: 1 3 5 7 9 11 13 15 17 19
+//  Input   :   0       Output  :   Odd numbers up to 0: 
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
