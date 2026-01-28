@@ -17,7 +17,7 @@ public class program58_5
             return;
         }
 
-        // Check if it is a directory
+
         if (!dobj.isDirectory())
         {
             System.out.println("Given path is not a directory");
@@ -28,19 +28,17 @@ public class program58_5
 
         try
         {
-            // Create new file Marvellous.txt
+        
             FileWriter fw = new FileWriter("Marvellous.txt");
 
             for (int i = 0; i < files.length; i++)
             {
                 if (files[i].isFile())
                 {
-                    // Write file name and size
+                
                     fw.write("File Name : " + files[i].getName() + "\n");
                     fw.write("File Size : " + files[i].length() + " bytes\n");
                     fw.write("----------------------------------\n");
-
-                    // Write file data
                     FileInputStream fin = new FileInputStream(files[i]);
                     int data;
 
@@ -49,7 +47,7 @@ public class program58_5
                         fw.write(data);
                     }
 
-                    fw.write("\n\n"); // space between files
+                    fw.write("\n\n"); 
                     fin.close();
                 }
             }

@@ -14,7 +14,6 @@ public class program57_2
             return;
         }
 
-        // Check if it is a regular file
         if (fobj.isFile())
         {
             System.out.println("It is a regular file");

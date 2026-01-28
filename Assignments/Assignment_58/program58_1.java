@@ -26,11 +26,10 @@ public class program58_1
         System.out.println("\n--- Regular Files in Directory ---");
             for(int i = 0; i < files.length; i++)
         {
-            // PART 1: Regular file check
+            
             if (files[i].isFile())
             {
-                System.out.println( files[i].getName() + "  :  " + files[i].length() + " bytes"
-                );
+                System.out.println( files[i].getName() + "  :  " + files[i].length() + " bytes" );
             }
         }
     }

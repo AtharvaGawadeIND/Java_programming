@@ -7,14 +7,12 @@ public class program57_5
     {
         File dobj = new File(dirPath);
 
-        // Check if path exists
         if (dobj.exists() == false)
         {
             System.out.println("Path does not exist");
             return;
         }
 
-        // Check if it is a directory
         if (!dobj.isDirectory())
         {
             System.out.println("Given path is not a directory");

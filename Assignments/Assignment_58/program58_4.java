@@ -10,14 +10,14 @@ public class program58_4
     {
         File dobj = new File(dirPath);
 
-        // Check if path exists
+    
         if (!dobj.exists())
         {
             System.out.println("Path does not exist");
             return;
         }
 
-        // Check if it is a directory
+        
         if (!dobj.isDirectory())
         {
             System.out.println("Given path is not a directory");
@@ -28,27 +28,27 @@ public class program58_4
 
         try
         {
-            // Create new file Marvellous.txt
+            
             FileWriter fw = new FileWriter("Marvellous.txt");
 
             for (int i = 0; i < files.length; i++)
             {
                 if (files[i].isFile())
                 {
-                    // Write file name
+                    
                     fw.write("File Name: " + files[i].getName() + "\n");
                     fw.write("--------------------------\n");
 
                     FileInputStream fin = new FileInputStream(files[i]);
                     int data;
 
-                    // Write file data
+                
                     while ((data = fin.read()) != -1)
                     {
                         fw.write(data);
                     }
 
-                    fw.write("\n\n"); // spacing between files
+                    fw.write("\n\n"); 
                     fin.close();
                 }
             }

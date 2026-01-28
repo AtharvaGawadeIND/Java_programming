@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class program57_4
 {
-    // Helper method to calculate checksum
+    
     public static long Checksum(String fileName)
     {
         long checksum = 0;
@@ -36,7 +36,6 @@ public class program57_4
         return checksum;
     }
 
-    // Main method
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);

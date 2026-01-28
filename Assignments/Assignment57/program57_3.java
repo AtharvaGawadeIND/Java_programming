@@ -7,7 +7,6 @@ public class program57_3
     public static void createDirectory(String dirName)
     {
         File dobj = new File(dirName);
-
         
         if (dobj.exists())
         {
