@@ -1,0 +1,72 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class program58_3
+{
+    public static void writeAllFile(String dirPath)
+    {
+        File dobj = new File(dirPath);
+
+        
+        if (dobj.exists()== false)
+        {
+            System.out.println("Path does not exist");
+            return;
+        }
+
+        
+        if (!dobj.isDirectory())
+        {
+            System.out.println("Given path is not a directory");
+            return;
+        }
+
+        File files[] = dobj.listFiles();
+
+        try
+        {
+            // Create new file Marvellous.txt
+            FileWriter fw = new FileWriter("Marvellous.txt");
+
+            // Read data of each file
+            for (int i = 0; i < files.length; i++)
+            {
+                if (files[i].isFile())
+                {
+                    FileInputStream fin = new FileInputStream(files[i]);
+                    int data;
+
+                    while ((data = fin.read()) != -1)
+                    {
+                        fw.write(data);
+                    }
+
+                    fin.close();
+                    fw.write('\n'); // separate files
+                }
+            }
+
+            fw.close();
+            System.out.println("Data of all files written into Marvellous.txt");
+        }
+        catch (IOException e)
+        {
+            System.out.println("Error while processing files");
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter directory path: ");
+        String path = input.nextLine();
+
+        writeAllFile(path);
+
+        input.close();
+    }
+}
