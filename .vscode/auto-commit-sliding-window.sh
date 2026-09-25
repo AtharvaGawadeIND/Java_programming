@@ -5,6 +5,9 @@ set -u
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source_dir="$repo/Sliding_window"
 
+exec 9>"$repo/.git/sliding-window-watcher.lock"
+flock -n 9 || exit 0
+
 snapshot() {
   while IFS= read -r -d '' file; do
     relative_path="${file#"$source_dir"/}"

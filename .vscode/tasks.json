@@ -4,7 +4,7 @@
     {
       "label": "Auto-commit and push Sliding_window changes",
       "type": "shell",
-      "command": "bash .vscode/auto-commit-sliding-window.sh",
+      "command": "bash \"${workspaceFolder}/.vscode/auto-commit-sliding-window.sh\"",
       "isBackground": true,
       "problemMatcher": [],
       "presentation": {
